@@ -1,0 +1,93 @@
+/* Carrito contenedor */
+.carrito {
+    position: fixed; /* Fijo en la pantalla */
+    left: 20px;     /* A la derecha de la pantalla */
+    top: 190px;      /* A cierta distancia de la parte superior */
+    width: 250px;    /* Ancho compacto */
+    background-color: #f8f9fa; /* Color de fondo claro */
+    border: 1px solid #ddd;    /* Borde suave */
+    padding: 15px;   /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    border-radius: 8px;  /* Bordes redondeados */
+    z-index: 1000;   /* Aparece sobre otros elementos */
+    transition: width 0.3s ease, height 0.3s ease; /* Transición suave para efectos dinámicos */
+}
+
+/* Encabezado del carrito */
+.carrito h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Lista de productos en el carrito */
+.lista-carrito {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin márgenes */
+    max-height: 150px; /* Altura máxima para que no ocupe toda la pantalla */
+    overflow-y: auto; /* Desplazamiento vertical si la lista es muy larga */
+}
+
+.lista-carrito li {
+    font-size: 14px;
+    margin-bottom: 8px; /* Separación entre productos */
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre productos */
+    padding-bottom: 5px;
+    display: flex; /* Para alinear el texto y el botón de eliminar */
+    justify-content: space-between; /* Espacio entre el texto y el botón */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+/* Total del carrito */
+.carrito p {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* Estilo para el botón de añadir */
+.carrito-btn {
+    background-color: #007bff; /* Color azul del botón */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.carrito-btn:hover {
+    background-color: #0056b3; /* Cambia de color al pasar el ratón */
+}
+
+/* Estilo para el botón de eliminar */
+.btn-eliminar {
+    background-color: #dc3545; /* Color rojo para el botón de eliminar */
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333; /* efecto de color al pasar el mouse */
+}
+
+/* Estilo para el carrito cuando está  minimizado */
+.carrito.minimizado {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Transición suave para efectos de minimizar */
+}
+
+.carrito.minimizado h3,
+.carrito.minimizado ul,
+.carrito.minimizado p {
+    display: none; /* Oculta el contenido cuando se minimiza */
+}
+

@@ -1,0 +1,92 @@
+/* General styling for the header */
+header {
+    width: 100%;
+    background-color: #0066CC; /* Background blue */
+    color: white;
+}
+
+/* Flexbox to distribute the logo and social links */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+/* navegacion en main*/
+.main-nav {
+    background-color: #004F99; 
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main-nav li {
+    flex: 1;
+    text-align: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        text-align: right;
+        padding: 10px 20px;
+        background-color: #004F99;
+    }
+
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav ul.active {
+        display: flex;
+    }
+
+    .main-nav li {
+        width: 100%;
+    }
+}
