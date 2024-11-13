@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el contenido cubra al menos toda la pantalla */
+}
+
+/* Header General */
+.site-header {
+    background-color: #007BFF; /* Fondo azul */
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.header-logo img {
+    height: 50px;
+}
+
+.header-logo a {
+    text-decoration: none;
+}
+
+/* Navegación */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.header-nav ul li {
+    margin: 0 15px;
+}
+
+.header-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.header-nav ul li a:hover {
+    color: #d1ff7b; /* Verde claro al pasar el cursor */
+}
+
+/* Iconos de Redes Sociales */
+.header-social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-social-icon {
+    margin-left: 10px;
+}
+
+.header-social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.header-social-icon img:hover {
+    transform: scale(1.1); /* Agranda un poco al pasar el cursor */
+}
+
+/* Main Content */
+main {
+    flex: 1; /* Permite que main tome el espacio necesario y empuje el footer hacia abajo */
+    padding: 20px;
+}
+
+/* Footer General */
+footer {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #d1ff7b;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    color: #e0e0e0;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Apilamos los elementos en pantallas pequeñas */
+        align-items: center;    /* Centrado de todos los elementos */
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-social-icons {
+        margin-top: 10px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilos específicos para el botón de cerrar sesión */
+.header-logout {
+    margin-left: 20px;
+}
+
+.logout-button {
+    background-color: #dc3545;  /* Color rojo */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: inline-block; /* Asegura que el botón se muestre en línea */
+}
+
+/* Cambiar color del botón al pasar el mouse */
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Asegurando que en pantallas pequeñas el botón ocupe todo el ancho */
+@media (max-width: 768px) {
+    .header-logout {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;  /* Esto hará que el botón ocupe todo el ancho disponible */
+    }
+
+    .logout-button {
+        width: 100%;  /* Botón a pantalla completa en dispositivos pequeños */
+        text-align: center;
+        padding: 12px;  /* Aumentar el tamaño del botón */
+    }
+}
